@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(rgba(188, 61, 61, 0.5) , rgba(18, 13, 160, 0.3)), url(/images/dreams.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+@font-face {
+    font-family: 'digital-7';
+    src: url('/font/digital-7.ttf');
+}
+
+section{
+    background-image: linear-gradient(rgba(11, 10, 11, 0.9), rgba(101, 34, 12, 0.8));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 45px;
+}
+
+.clock{
+    width: 350px;
+    height: 350px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+   
+    animation: rotate-shadow 3s linear infinite;
+}
+
+ 
+
+ @keyframes rotate-shadow {
+    0% { box-shadow: 5px 0 5px rgba(0, 0, 255, 0.288), -10px 0 20px rgba(255, 0, 0, 0.288); }
+    25% { box-shadow: 0 10px 20px rgba(0, 0, 255, 0.288), 0 -10px 20px rgba(255, 0, 0, 0.288); }
+    50% { box-shadow: -10px 0 20px rgba(0, 0, 255, 0.288), 10px 0 20px rgba(255, 0, 0, 0.288); }
+    75% { box-shadow: 0 -10px 20px rgba(0, 0, 255, 0.288), 0 10px 20px rgba(255, 0, 0, 0.288); }
+    100% { box-shadow: 10px 0 20px rgba(0, 0, 255, 0.288), -10px 0 20px rgba(255, 0, 0, 0.288); }
+}
+
+.date{
+    /* background-color: blue; */
+    position: absolute;
+    font-size: 39px;
+    top: 90px;
+    font-family: sans-serif;
+
+}
+
+.date div{
+    /* background-color: brown; */
+    color: white;
+    margin: 20px 60px;
+    text-align: center;
+}
+
+#today{
+    position: absolute;
+    top: -40px;
+    left: 130px
+}
+
+#content{
+    position: absolute;
+    top: 190px;
+    left: 70px;
+    color: red;
+    border: 3px inset rgb(240, 147, 7);
+    width: 60%;
+    border-radius: 15px;
+    font-family: 'Digital-7';
+    /* padding: 10px 5px; */
+    /* background-color: aquamarine; */
+}
+
+#seconds{
+    font-size: 24px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid red; */
+    border-radius: 50px;
+    position: absolute;
+    top: -80;
+    /* padding-left: 2px; */
+    padding-top: 5px;
+}
+
+.contact{
+    position: fixed;
+    left: -40px;
+    top: 200px;
+    opacity: 0;
+    animation: fade-left 1000ms forwards;
+    animation-delay: 1000ms;
+    background-color: #25d366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+@keyframes fade-left {
+    100%{
+        left: 30px;
+        opacity: 1;
+    }
+}
+
+.whatsapp{
+    font-size: 40px;
+    color: #25d366;
+    display: inline-block;
+    color: white;
+}
+
+.whatsapp:hover{
+    transform: scale(1.2);
+    transition: all 400ms;
+}
+.contact span{
+    color: rgb(41, 219, 18);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transform: rotateZ(20deg) translateX(10px);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+.contact .whatsapp:hover + span{
+    transform: rotateZ(0deg) translateX(0px);
+    opacity: 1;
+}
+
+.mih{
+    
+    font-size: 60px;
+}
+
+.me{
+    color: rgb(25, 17, 249);
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+}
+.me h1{
+    font-family: sans-serif;
+    font-size: 50px;
+    animation: typing 10s steps(28) forwards infinite, 19s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 3px solid;
+    font-family: monospace;
+    /* text-align: center; */
+}
+
+@keyframes typing{
+    0%, 100%{
+        width:0;
+    }
+    50%{
+        width: 45%;
+    }
+}
+
+
+@media (max-width:770px) {
+    .me h1{
+        font-size: 28px;
+ 
+    }
+
+    .contact{
+        top: 100px;
+        
+    }
+
+
+    @keyframes typing{
+        0%, 100%{
+            width:0;
+        }
+        50%{
+            width: 100%;
+        }
+    }
+}
+@media (max-width:1000px) {
+    .me h1{
+        font-size: 45px;
+ 
+    }
+    @keyframes typing{
+        0%, 100%{
+            width:0;
+        }
+        50%{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .me h1{
+        padding-top: 10px;
+        font-size: 35px;
+ 
+    }
+}
+
+ 
